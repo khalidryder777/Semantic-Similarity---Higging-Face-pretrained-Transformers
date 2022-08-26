@@ -35,7 +35,7 @@ for i in range(len(df)):
     embeddings = model.encode(sentences)
 ```
 ## 6. Calculating Cosine Similarity from sklearn library:
-We also converted our result into a list and did unpacking to make it more readable
+We also converted our result into a list and did list unpacking to make it more readable
 ```python
     score = cosine_similarity(embeddings[[0]],embeddings[[1]])
     
