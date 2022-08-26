@@ -44,7 +44,7 @@ Copy the list values x into a suitable variable
     x.append(s[0][0])  
     ES_sim1 = x
 ```
-## 7. Do the same thing for the remaining 3 sentence pairs
+## 7. Do the same thing for the remaining 3 sentence pairs:
 ```python
 y = []
 for i in range(len(df)):
@@ -86,7 +86,7 @@ for i in range(len(df)):
 AP_sim1 = a
 ```
 
-## 8. Repeat from step 3 for the second model we're going to use
+## 8. Repeat from step 3 for the second model we're going to use:
 ```python
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
@@ -143,15 +143,15 @@ for i in range(len(df)):
 AP_sim2 = e
 ```
 
-## 9. Now, create a dataframe encompassing all the pair results of both the models.
+## 9. Now, create a dataframe encompassing all the pair results of both the models:
 ```python
 OP_data = pd.DataFrame(list(zip(ES_sim1, EP_sim1, AS_sim1, AP_sim1, ES_sim2, EP_sim2, AS_sim2, AP_sim2)),
                columns =['ES_sim1', 'EP_sim1', 'AS_sim1', 'AP_sim1', 'ES_sim2', 'EP_sim2', 'AS_sim2', 'AP_sim2'])
 
 ```
 
-## 10. Merge your original data with the respective results (similarity scores)
-## Convert the dataframe to CSV file
+## 10. Merge your original data with the respective results (similarity scores):
+## Finally, convert the dataframe to CSV file
 ```python
 result = pd.concat([df, OP_data], axis=1)
 result.to_csv('df_sim', index=False)
