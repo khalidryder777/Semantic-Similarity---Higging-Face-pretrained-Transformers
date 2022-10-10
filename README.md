@@ -18,7 +18,7 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    Each word gets the same embedding vector irrespective of the context of the rest of the sentence in which it appears
    Thus, modern contextual algorithms are better suited for our task.
 
-#### b. Measuring Similarity with classical contextual algorithms like
+#### b. Measuring Similarity with modern contextual algorithms like
 
     i) BERT
     
