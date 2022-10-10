@@ -3,7 +3,7 @@ We tested the veracity of 6 promising Semantic Similarity Sentence Transformer m
 In our project we calculated the similarity between two documents where one of the document is an elaboration of certain scene/s and could contain multiple sentences and the other document is the abstraction/distillation of the same scene/s.
 
 ## So why SBERT?
-Before we answer why SBERT/transformers, let’s try to understand what our requirements are:
+Before we answer why SBERT/Sentence-Transformers, let’s try to understand what our requirements are:
 1. We want to compute the semantic similarities between two documents meaningfully.
 2. The documents can be of varying lengths, from a short sentence to a paragraph containing a couple of sentences.
 
