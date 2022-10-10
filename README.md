@@ -2,13 +2,13 @@
 We tested the veracity of 6 promising Semantic Similarity Sentence Transformer models provided by Hugging Face with respect to ‘the human ratings paper and datasets’ 
 In our project we calculated the similarity between two documents where one of the document is an elaboration of certain scene/s and could contain multiple sentences and the other document is the abstraction/distillation of the same scene/s.
 
-So why SBERT?
+##So why SBERT?
 Before we answer why SBERT/transformers, let’s try to understand what our requirements are:
 1. We want to compute the semantic similarities between two documents meaningfully.
 2. The documents can be of varying lengths, from a short sentence to a paragraph containing a couple of sentences.
 
-There were two ways we could go about this:
-a. Measuring Similarity with classical non-contextual algorithms like:
+###There were two ways we could go about this:
+####a. Measuring Similarity with classical non-contextual algorithms like:
     i) Bag of Words (Count Vectorizer and TFIDF Vectorizer)
     ii) Jaccard Similarity
     The above algorithms assume that similar texts have many words common in them, but it’s obviously not the case all of the time.
@@ -18,7 +18,7 @@ a. Measuring Similarity with classical non-contextual algorithms like:
     Each word gets the same embedding vector irrespective of the context of the rest of the sentence in which it appears
     Thus, modern contextual algorithms are better suited for our task.
 
-b. Measuring Similarity with classical contextual algorithms like
+####b. Measuring Similarity with classical contextual algorithms like
     i) BERT
     ii) SBERT
     BERT became the state-of-the-art language model by utilizing a self-supervised pre-training task called Masked Language Modeling where some words are
