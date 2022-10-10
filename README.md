@@ -36,7 +36,8 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    comparison. SBERT does this by processing one sentence at a time and the apply mean pooling (BERT outputs token embeddings consisting of 512 768-
    dimensional vectors. The mean pooling function compresses that data into a single 768-dimensional vector) on the final output layer to produce a sentence
    embedding. 
-   Moreover, SBERT is fine-tuned on sentence pairs dataset/s using siamese architecture which can be thought of as running two identical BERTs in parallel
+   Moreover, SBERT is fine-tuned on sentence pairs dataset/s using siamese architecture which can be thought of as running two identical BERTs(one for each
+   sentence) in parallel
    that share the exact same network weights or tied weights.
 
 #### SBERT maintains the accuracy of BERT while being significantly faster (65 hours vs 5 seconds). Thus we'll be using SBERT for semantically comparing two documents of varying length.
