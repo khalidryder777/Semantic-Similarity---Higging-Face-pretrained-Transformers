@@ -9,8 +9,8 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
 
 ### There were two ways we could go about this:
 #### a. Measuring Similarity with classical non-contextual algorithms like:
-   i) Bag of Words (Count Vectorizer and TFIDF Vectorizer)
-   ii) Jaccard Similarity
+    i) Bag of Words (Count Vectorizer and TFIDF Vectorizer)
+    ii) Jaccard Similarity
    The above algorithms assume that similar texts have many words common in them, but it’s obviously not the case all of the time.
    One way we can tackle this problem is by using pre-trained word embeddings using methods such as Word2Vec, Glove, etc
    This allows better performance but the limitation of the above methods is that the actual words are used in similarity calculation without considering
@@ -19,8 +19,8 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    Thus, modern contextual algorithms are better suited for our task.
 
 #### b. Measuring Similarity with classical contextual algorithms like
-   i) BERT
-   ii) SBERT
+    i) BERT
+    ii) SBERT
    BERT became the state-of-the-art language model by utilizing a self-supervised pre-training task called Masked Language Modeling where some words are
    kept hidden randomly and the model is trained to predict the missing words by providing it with words before and after the missing word. Doing this
    training process over a massive corpus of text data allows BERT to learn the semantic relationships between words in the language. Apart from this SBERT
