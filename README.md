@@ -11,7 +11,6 @@ There were two ways we could go about this:
 a. Measuring Similarity with classical non-contextual algorithms like:
     i) Bag of Words (Count Vectorizer and TFIDF Vectorizer)
     ii) Jaccard Similarity
-    
     The above algorithms assume that similar texts have many words common in them, but it’s obviously not the case all of the time.
     One way we can tackle this problem is by using pre-trained word embeddings using methods such as Word2Vec, Glove, etc
     This allows better performance but the limitation of the above methods is that the actual words are used in similarity calculation without considering
@@ -28,7 +27,6 @@ b. Measuring Similarity with classical contextual algorithms like
     also uses Self-attention where the attention mechanism is applied between a word and all of the other words in its own context
     BERT produces very accurate similarity scores but it’s not scalable as finding the most similar pair in a collection of 10,000 sentences requires about
     50 million inference computations which roughly takes nearly 65 hours.
-    
     SBERT solves the problem of inference computation by producing sentence embeddings instead of doing inference computation for very sentence pair
     comparison. SBERTdoes this by processing one sentence at a time and the apply mean pooling (BERT outputs token embeddings consisting of 512768-
     dimensional vectors. The mean pooling function compresses that data into a single 768-dimensional vector) on the final output layer to produce a sentence
