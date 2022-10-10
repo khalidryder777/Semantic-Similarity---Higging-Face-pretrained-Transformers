@@ -12,7 +12,7 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
     i) Bag of Words (Count Vectorizer and TFIDF Vectorizer)
     ii) Jaccard Similarity
    The above algorithms assume that similar texts have many words common in them, but it’s obviously not the case all of the time.
-   One way we can tackle this problem is by using pre-trained word embeddings using methods such as Word2Vec, Glove, etc
+   One way we can tackle this problem is by using pre-trained word embeddings using methods such as ** Word2Vec, Glove, ** etc
    This allows better performance but the limitation of the above methods is that the actual words are used in similarity calculation without considering
    the context in which the words appear.
    Each word gets the same embedding vector irrespective of the context of the rest of the sentence in which it appears
