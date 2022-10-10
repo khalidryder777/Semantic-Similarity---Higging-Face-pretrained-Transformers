@@ -33,7 +33,7 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
     ii) SBERT
     
    SBERT solves the problem of inference computation by producing sentence embeddings instead of doing inference computation for very sentence pair
-   comparison. SBERTdoes this by processing one sentence at a time and the apply mean pooling (BERT outputs token embeddings consisting of 512768-
+   comparison. SBERT does this by processing one sentence at a time and the apply mean pooling (BERT outputs token embeddings consisting of 512 768-
    dimensional vectors. The mean pooling function compresses that data into a single 768-dimensional vector) on the final output layer to produce a sentence
    embedding. 
    Moreover, SBERT is fine-tuned on sentence pairs dataset/s using siamese architecture which can be thought of as running two identical BERTs in parallel
