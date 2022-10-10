@@ -19,14 +19,19 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    Thus, modern contextual algorithms are better suited for our task.
 
 #### b. Measuring Similarity with classical contextual algorithms like
+
     i) BERT
-    ii) SBERT
+    
    BERT became the state-of-the-art language model by utilizing a self-supervised pre-training task called Masked Language Modeling where some words are
    kept hidden randomly and the model is trained to predict the missing words by providing it with words before and after the missing word. Doing this
    training process over a massive corpus of text data allows BERT to learn the semantic relationships between words in the language. Apart from this SBERT
    also uses Self-attention where the attention mechanism is applied between a word and all of the other words in its own context
    BERT produces very accurate similarity scores but it’s not scalable as finding the most similar pair in a collection of 10,000 sentences requires about
    50 million inference computations which roughly takes nearly 65 hours.
+   
+    
+    ii) SBERT
+    
    SBERT solves the problem of inference computation by producing sentence embeddings instead of doing inference computation for very sentence pair
    comparison. SBERTdoes this by processing one sentence at a time and the apply mean pooling (BERT outputs token embeddings consisting of 512768-
    dimensional vectors. The mean pooling function compresses that data into a single 768-dimensional vector) on the final output layer to produce a sentence
