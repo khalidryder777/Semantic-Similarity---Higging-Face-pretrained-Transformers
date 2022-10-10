@@ -25,7 +25,7 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    BERT became the state-of-the-art language model by utilizing a self-supervised pre-training task called Masked Language Modeling where some words are
    kept hidden randomly and the model is trained to predict the missing words by providing it with words before and after the missing word. Doing this
    training process over a massive corpus of text data allows BERT to learn the semantic relationships between words in the language. Apart from this SBERT
-   also uses Self-attention where the attention mechanism is applied between a word and all of the other words in its own context
+   also uses Self-attention where the attention mechanism is applied between a word and all of the other words in its own context.
    BERT produces very accurate similarity scores but it’s not scalable as finding the most similar pair in a collection of 10,000 sentences requires about
    50 million inference computations which roughly takes nearly 65 hours.
    
@@ -37,8 +37,9 @@ Before we answer why SBERT/transformers, let’s try to understand what our requ
    dimensional vectors. The mean pooling function compresses that data into a single 768-dimensional vector) on the final output layer to produce a sentence
    embedding. 
    Moreover, SBERT is fine-tuned on sentence pairs dataset/s using siamese architecture which can be thought of as running two identical BERTs in parallel
-   that share the exact same network weights or tied weights
+   that share the exact same network weights or tied weights.
 
+#### SBERT maintains the accuracy of BERT while being significantly faster (65 hours vs 5 seconds). Thus we'll be using SBERT for semantically comparing two documents of varying length.
 
 ## 1. Download/install required libraries and modules:
 We used Jupyter Notebook from Anaconda distribution here. Please type the following in a notebook in Jupyter Notebook to install the libraries. Alternatively, the libraries can also be installed using the Conda terminal.
